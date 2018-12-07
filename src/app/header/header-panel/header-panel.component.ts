@@ -25,10 +25,12 @@ export class HeaderPanelComponent implements OnInit{
   constructor(private location: Location,
               private locationService: LocationSectionService) {
     this.locationService.currentLocation.subscribe(result => {
-      const {location: link} = result;
-      if (link) {
-        this.location.go(link);
-        this.selectedItem = this.items.find(item => item.link === link);
+      if (result) {
+        const {location: link} = result;
+        if (link) {
+          this.location.go(link);
+          this.selectedItem = this.items.find(item => item.link === link);
+        }
       }
     })
   }

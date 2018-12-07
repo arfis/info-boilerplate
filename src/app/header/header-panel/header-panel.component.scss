@@ -2,6 +2,7 @@
   position: sticky;
   top: 0px;
   display: block;
+  height: 110px;
 }
 
 .items-container {
@@ -59,10 +60,9 @@
   display: flex;
   align-items: center;
   background: rgba(217, 217, 217, 0.31);
-  border: 1px solid rgba(217, 217, 217, 0.50);
+  border-bottom: 1px solid rgba(217, 217, 217, 0.50);
   transition: all .2s;
   height: 110px;
-  position: absolute;
   width: 100%;
 
   &.scrolled {

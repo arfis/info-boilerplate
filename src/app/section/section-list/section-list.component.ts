@@ -9,6 +9,7 @@ import { SectionComponent } from '../section/section.component';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { LocationSectionService } from '../../location-section/location-section.service';
 import { fromEvent } from 'rxjs';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-section-list',
@@ -29,12 +30,14 @@ export class SectionListComponent implements AfterContentInit {
     locationSectionService.currentLocation
       .subscribe(
         result => {
-          const {location, scroll} = result;
-          if (location) {
-            this.currentValue = location;
-            const section = this.content.find(item => item.id === location);
-            if (scroll) {
-              this.scrollToItem(section);
+          if (result) {
+            const {location, scroll} = result;
+            if (location) {
+              this.currentValue = location;
+              const section = this.content.find(item => item.id === location);
+              if (scroll) {
+                this.scrollToItem(section);
+              }
             }
           }
         }

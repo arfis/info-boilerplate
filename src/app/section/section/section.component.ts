@@ -28,7 +28,7 @@ export class SectionComponent implements OnInit {
   }
 
   ngOnInit() {
-    fromEvent(window, 'wheel').subscribe(e => {
+    fromEvent(window, 'scroll').subscribe(e => {
       this.onScroll();
     });
   }
