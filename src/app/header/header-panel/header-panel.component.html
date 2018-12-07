@@ -1,0 +1,19 @@
+<div [ngClass]="{'scrolled': isScrolled}" class="header-wrapper">
+  <img [src]="img">
+
+  <nav class="items-container">
+    <div class="link" *ngFor="let item of items"
+         (click)="selectItem(item)"
+         (mouseover)="hoverItem(item)"
+         (mouseleave)="resetHoverItem()">
+      <div class="content">
+        <span>{{item.label}}</span>
+        <div *ngIf="hasUnderline(item)" class="underline"></div>
+      </div>
+
+    </div>
+  </nav>
+  <div class="actions">
+    ACTION
+  </div>
+</div>
