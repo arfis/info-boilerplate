@@ -1,0 +1,14 @@
+$break-small: 520px;
+
+.central-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: $break-small) {
+    display: block;
+    padding-top: 110px;
+  }
+}

@@ -37,10 +37,8 @@ export class HeaderPanelComponent implements OnInit{
 
   ngOnInit() {
     fromEvent(window, 'scroll')
-      .pipe(debounceTime(100))
       .subscribe(e => {
         // const offsetHeight = this.isScrolled ? 0 : 55;
-      console.log(document.documentElement.scrollTop);
       if (document.documentElement.scrollTop < 55) {
         this.isScrolled = false;
       } else {

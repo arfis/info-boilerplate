@@ -1,8 +1,10 @@
 :host {
-  position: sticky;
+  position: fixed;
   top: 0px;
   display: block;
   height: 110px;
+  width: 100%;
+  z-index: 2;
 }
 
 .items-container {
@@ -35,10 +37,10 @@
   transition: all .4s;
 
   &:hover {
-    color: rgba(109, 109, 109, 0.2);
+    color: rgba(172, 172, 172, 0.99);
 
     .underline {
-      border-bottom: 2px solid rgba(109, 109, 109, 0.2);
+      border-bottom: 2px solid rgba(172, 172, 172, 0.99);
     }
    }
 }
@@ -68,6 +70,12 @@
   &.scrolled {
     height: 55px;
     background: rgba(101, 101, 101, 0.77);
+  }
+
+  a {
+    align-items: center;
+    display: flex;
+    width: 100%;
   }
 
   img {

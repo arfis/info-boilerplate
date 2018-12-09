@@ -46,7 +46,7 @@ export class SectionListComponent implements AfterContentInit {
   }
 
   scrollToItem(section) {
-    section.element.nativeElement.scrollIntoView({behavior: 'smooth'});
+    section.element.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start'});
   }
 
   ngAfterContentInit() {

@@ -1,0 +1,32 @@
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.section {
+  margin: 20px;
+  overflow: hidden;
+
+  &.other {
+    display: block;
+    text-align: center;
+  }
+}
+
+
+
+.sub-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.items {
+  padding-left: 10px;
+}
+
+h2 {
+  text-align: center;
+}

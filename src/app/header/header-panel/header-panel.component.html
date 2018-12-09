@@ -1,5 +1,8 @@
 <div [ngClass]="{'scrolled': isScrolled}" class="header-wrapper">
-  <img [src]="img">
+
+  <a href="/">
+    <img [src]="img">
+  </a>
 
   <nav class="items-container">
     <div class="link" *ngFor="let item of items"

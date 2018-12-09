@@ -1,0 +1,274 @@
+<div [ngClass]="{'fullscreen-wrapper' : isFullscreen}">
+  <div [ngClass]="{'opened': isFullscreen && openable}" class="container">
+    <ng-container *ngIf="isFullscreen && openable">
+      <div class="header">
+        <span (click)="closeFullscreen()"></span>
+      </div>
+    </ng-container>
+    <div *ngIf="picture && !isFullscreen" class="img-wrapper">
+      <img [src]="picture">
+    </div>
+    <h3>{{title}}</h3>
+    <div class="content">
+      <p>{{message}}</p>
+      <p *ngIf="isFullscreen">qw e
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+        qw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qwqw
+        qwe qwe qwe
+        qwe qwe qw kakshdj ahskhdj asdkashjkd ajksdhjk asd qw
+
+      </p>
+    </div>
+  </div>
+</div>
