@@ -106,6 +106,7 @@
     display: block;
     width: 100%;
     cursor: pointer;
+    padding: 0px 10px;
 
     &:hover {
       background-color: white;
@@ -115,6 +116,5 @@
   img {
     height: 32px;
     width: 32px;
-    padding: 0px 10px;
   }
 }
