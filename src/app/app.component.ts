@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -17,22 +18,33 @@ export class AppComponent {
     {label: 'Cennik', link: 'price'}
   ];
 
-  sauna = {title: 'Sauna', message: 'Saunovanie adsakl djasdk jaksd jkahjkd khjkw hjehj agbdasjdbjabd jbqkjwn dkjqnd kjqwnd kqnwkdj nqkjwdn qkjwdn kqjwndqjkw njkqnwdkqwjndjkqwndwnjkqw'}
+  sauna = {
+    title: 'Sauna',
+    message: 'Saunovanie adsakl djasdk jaksd jkahjkd khjkw hjehj agbdasjdbjabd jbqkjwn dkjqnd kjqwnd kqnwkdj nqkjwdn qkjwdn kqjwndqjkw njkqnwdkqwjndjkqwndwnjkqw'
+  };
   panelData = [
     {
-      title: 'jacuzi',
+      title: 'product.jacuzzi',
       message: 'message jacuzi daskod askod kasod oaskdo askod osado askodaso dsa',
       picture: 'http://relaxworlds.sk/UserFiles/Image/2013_05_27_16_43_44.png'
     },
     {
-      title: 'masaze',
+      title: 'product.massage',
       message: 'message jacuzi daskod askod kasod oaskdo askod osado askodaso dsa',
       picture: 'http://relaxworlds.sk/UserFiles/Image/2013_05_27_16_43_51.png'
     },
     {
-      title: 'sauny',
+      title: 'product.sauna',
       message: 'message jacuzi daskod askod kasod oaskdo askod osado askodaso dsa',
       picture: 'http://relaxworlds.sk/UserFiles/Image/2013_05_27_16_43_58.png'
     }
-  ]
+  ];
+
+  constructor(private translate: TranslateService) {
+    translate.addLangs(['en', 'sk']);
+    translate.setDefaultLang('en');
+    translate.use('en');
+  }
+
 }
+

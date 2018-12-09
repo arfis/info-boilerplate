@@ -8,7 +8,7 @@
     <div *ngIf="picture && !isFullscreen" class="img-wrapper">
       <img [src]="picture">
     </div>
-    <h3>{{title}}</h3>
+    <h3>{{title | translate}}</h3>
     <div class="content">
       <p>{{message}}</p>
       <p *ngIf="isFullscreen">qw e

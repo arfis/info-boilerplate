@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { LocationSectionService } from '../../location-section/location-section.service';
 import { fromEvent } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header-panel',
@@ -21,9 +22,14 @@ export class HeaderPanelComponent implements OnInit{
   hoveredItem;
 
   isScrolled;
+  activeTranslation;
+  allLanguages;
+  languageSettingsVisible = false;
 
   constructor(private location: Location,
-              private locationService: LocationSectionService) {
+              private locationService: LocationSectionService,
+              private translateService: TranslateService) {
+
     this.locationService.currentLocation.subscribe(result => {
       if (result) {
         const {location: link} = result;
@@ -36,6 +42,16 @@ export class HeaderPanelComponent implements OnInit{
   }
 
   ngOnInit() {
+    this.activeTranslation = `assets/img/flags/${this.translateService.currentLang}.png`;
+    this.allLanguages = this.translateService.langs;
+
+    this.translateService.onLangChange.subscribe(
+      () => {
+        const activeLang = this.translateService.currentLang;
+        this.activeTranslation = `assets/img/flags/${activeLang}.png`;
+      }
+    )
+
     fromEvent(window, 'scroll')
       .subscribe(e => {
         // const offsetHeight = this.isScrolled ? 0 : 55;
@@ -47,8 +63,17 @@ export class HeaderPanelComponent implements OnInit{
     });
   }
 
+  openLanguages() {
+    this.languageSettingsVisible = !this.languageSettingsVisible;
+  }
+
   selectItem(item) {
     this.locationChange(item.link);
+  }
+
+  setLanguage(language) {
+    this.translateService.use(language);
+    this.languageSettingsVisible = false;
   }
 
   resetHoverItem() {
@@ -61,6 +86,10 @@ export class HeaderPanelComponent implements OnInit{
 
   hasUnderline(item) {
     return this.selectedItem === item || this.hoveredItem === item;
+  }
+
+  getLanguageImage(language) {
+    return `assets/img/flags/${language}.png`;
   }
 
   private locationChange(location) {

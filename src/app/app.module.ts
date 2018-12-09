@@ -11,6 +11,9 @@ import { PanelComponent } from './panel/panel.component';
 import { FooterComponent } from './footer/footer.component';
 import { PanelsContainerComponent } from './panels-container/panels-container.component';
 import { PricesComponent } from './prices/prices.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 @NgModule({
   declarations: [
@@ -25,11 +28,25 @@ import { PricesComponent } from './prices/prices.component';
     BrowserModule,
     HeaderModule,
     SectionModule,
-    LocationSectionModule
+    LocationSectionModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [
     LocationSectionService
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
+
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
