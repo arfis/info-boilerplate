@@ -14,6 +14,10 @@ import { PricesComponent } from './prices/prices.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ImageComponent } from './image/image.component';
+import { ImageDetailComponent } from './image-detail/image-detail.component';
+import { ImageListComponent } from './image-list/image-list.component';
+import { DataService } from './shared/data/data.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,10 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     PanelComponent,
     FooterComponent,
     PanelsContainerComponent,
-    PricesComponent
+    PricesComponent,
+    ImageListComponent,
+    ImageComponent,
+    ImageDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +46,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     })
   ],
   providers: [
-    LocationSectionService
+    LocationSectionService,
+    DataService
   ],
   bootstrap: [AppComponent]
 })

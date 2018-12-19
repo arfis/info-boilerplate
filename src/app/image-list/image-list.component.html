@@ -1,0 +1,9 @@
+<div class="img-list">
+  <ms-image (click)="openImageDetail(image)"
+            [imageUrl]="image.file" *ngFor="let image of imageList"></ms-image>
+</div>
+<ms-image-detail #detail *ngIf="openedImage"
+                 (onNext)="setNextImage()"
+                 (onPrevious)="setPreviousImage()"
+                 (onClose)="closeImage()"
+                 [image]="openedImage"></ms-image-detail>
